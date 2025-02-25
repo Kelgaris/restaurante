@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/styleBasico.css">
+    <link rel="shortcut icon" href="./src/LOG.jfif" type="image/x-icon">
+    <title>El Rincón de la Pasta</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="principal.html">
+                    <img src="./src/LOG.jfif" alt="Logo Empresa" class="d-inline-block align-text-top" style="max-width: 150px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto d-flex align-items-start ml-4">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">RESERVAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pedidos.html">PEDIDO</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline d-flex mx-lg-3 col-12 col-md-6 col-lg-2">
+                        <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+                        <button class="btn btn-sm btn-outline" id="buscar" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Productos menus -->
+    <div class="row p-5">
+        <!--Producto 1-->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card">
+                <img src="./src/menu1.jpeg" class="card-img-top" alt="Producto mas vendido 1">
+                <div class="card-body">
+                    <h5 class="card-title">Menú Lunes a Jueves</h5>
+                    <p class="card-text">Entrante, ensalada, primero y postre, con bebida y café.</p>
+                    <h5 class="card-prize">Precio: 21.99€</h5>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#menuModal" id="seleccionar">Seleccionar</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Producto 2-->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card">
+                <img src="./src/menu2.png" class="card-img-top" alt="Producto Destacado 1">
+                <div class="card-body">
+                    <h5 class="card-title">Menú Viernes a Domingo</h5>
+                    <p class="card-text">Entrante, ensalada, primero y postre, con bebida y café.</p>
+                    <h5 class="card-prize">Precio: 24.99€</h5>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#menuModal" id="seleccionar">Seleccionar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card">
+                <img src="./src/menu3.avif" class="card-img-top" alt="Producto Novedoso 2">
+                <div class="card-body">
+                    <h5 class="card-title">Menú Infantil</h5>
+                    <p class="card-text">Primero con postre y refresco junto con patatas fritas.</p>
+                    <h5 class="card-prize">Precio: 12.99€</h5>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#menuInfantilModal" id="seleccionar">Seleccionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para menús Lunes a Jueves y Viernes a Domingo -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="menuForm">
+                        <div class="mb-3">
+                            <label for="entrante" class="form-label">Entrante</label>
+                            <select class="form-select" id="entrante" required>
+                                <option value="">Seleccione un entrante</option>
+                                <option value="sopa">Sopa</option>
+                                <option value="panAjo">Panes de Ajo</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ensalada" class="form-label">Ensalada</label>
+                            <select class="form-select" id="ensalada" required>
+                                <option value="">Seleccione una ensalada</option>
+                                <option value="verde">Ensalada Verde</option>
+                                <option value="cesar">Ensalada César</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="primero" class="form-label">Plato Primero</label>
+                            <select class="form-select" id="primero" required>
+                                <option value="">Seleccione un plato primero</option>
+                                <option value="pasta">Pasta</option>
+                                <option value="pizza">Pizza</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bebida" class="form-label">Bebida</label>
+                            <select class="form-select" id="bebida" required>
+                                <option value="">Seleccione una bebida</option>
+                                <option value="agua">Agua</option>
+                                <option value="cocacola">CocaCola</option>
+                                <option value="fanta">Fanta</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="postre" class="form-label">Postre</label>
+                            <select class="form-select" id="postre" required>
+                                <option value="">Seleccione un postre</option>
+                                <option value="tarta">Tarta Abuela</option>
+                                <option value="helado">Helado</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" form="menuForm" class="btn btn-primary">Confirmar Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para menús Infantiles -->
+    <div class="modal fade" id="menuInfantilModal" tabindex="-1" aria-labelledby="menuInfantilModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="menuInfantilModalLabel">Menú Infantil</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="menuInfantilForm">
+                        <div class="mb-3">
+                            <label for="primeroInfantil" class="form-label">Primero</label>
+                            <select class="form-select" id="primeroInfantil" required>
+                                <option value="">Seleccione un plato primero</option>
+                                <option value="pasta">Pasta</option>
+                                <option value="pizza">Pizza</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bebidaInfantil" class="form-label">Bebida</label>
+                            <select class="form-select" id="bebidaInfantil" required>
+                                <option value="">Seleccione una bebida</option>
+                                <option value="zumo">Zumo</option>
+                                <option value="agua">Agua</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="postreInfantil" class="form-label">Postre</label>
+                            <select class="form-select" id="postreInfantil" required>
+                                <option value="">Seleccione un postre</option>
+                                <option value="flan">Flan</option>
+                                <option value="helado">Helado</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" form="menuInfantilForm" class="btn btn-primary">Confirmar Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-light py-4 bg-black">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">&#169; El rincón de la pasta. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-unstyled d-flex justify-content-center justify-content-md-end mb-0">
+                        <li class="ms-3">
+                            <a href="#" class="text-light" aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="ms-3">
+                            <a href="#" class="text-light" aria-label="Twitter">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="ms-3">
+                            <a href="#" class="text-light" aria-label="YouTube">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="ms-3">
+                            <a href="#" class="text-light" aria-label="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/hacerPedido.js"></script>
+</body>
+</html>
