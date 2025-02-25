@@ -173,3 +173,40 @@ footer a i:hover {
 .modal-footer {
   border-top: 2px solid #ddd;
 }
+
+footer a i:hover{
+    box-shadow: 2px 2px 15px #9e7c0b;
+}
+
+/*VISTA ADMINSITRADOR*/
+
+.tituloPedidos, .tituloMesas{
+    text-align: center;
+}
+
+.containerPedidos{
+    border-right: 2px solid #e7b40b;
+}
+
+.containerMesas{
+    border-left: 2px solid #e7b40b;
+}
+
+.tituloPedidos, .tituloMesas{
+    border-bottom: 3px solid #e7b40b;
+}
+
+
+@media(max-width: 765px) {
+    .row{
+        border-bottom: none;
+    }
+    
+    .containerMesas, .containerPedidos{
+        border: none;
+    }
+
+    .tituloPedidos, .tituloMesas{
+        border-bottom: 3px solid #e7b40b;
+    }
+}
