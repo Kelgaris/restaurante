@@ -18,7 +18,7 @@ document.querySelector("form").addEventListener("submit", async (event) => {
         
         localStorage.setItem("token", data.token); // Guarda el token
         alert("Inicio de sesión exitoso");
-        window.location.href = "principal.html"; // Redirige a la página principal
+        window.location.href = data.rol === "admin" ? "vistaAdministrador.html" : "principal.html";
     } else {
         alert(data.msg);
     }
