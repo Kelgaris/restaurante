@@ -1,0 +1,152 @@
+*{
+    max-width: 100%;
+}
+
+/*Fondo de color para el login y el registro de nuestra app*/
+.gradient-custom{
+    /* fallback for old browsers */
+    background: #6a11cb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #e7b40b, #9c8330,  #e7b40b)
+}
+
+#containerLogin{
+    border: 5px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.6);
+    box-shadow: 3px 3px 5px black;
+}
+
+#containerImagenLogin img{
+    height: 54.5vh;
+    border-radius: 10px;
+}
+
+#containerRegistro{
+    border: 5px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.6);
+    box-shadow: 3px 3px 5px black;
+    padding: 1%;
+}
+
+#containerImagenRegistro img{
+    height: 58vh;
+    border-radius: 10px;
+    width: auto;
+}
+
+/*PAGINA PRINCIPAL DE LA WEB*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand img{
+    width: 75px;
+    height: 75px;
+}
+
+.nav-item a{
+    color: #f5f5f5;
+}
+
+.nav-item a:active{
+    color: #e7b40b;
+}
+
+.nav-item a:hover{
+    color: #967f3b;
+    text-decoration: underline solid #967f3b;
+}
+
+#buscar{
+    color: #e7b40b;
+    border: 1px solid #e7b40b;
+}
+
+#buscar:hover{
+    background-color: #e7b40b;
+    color: black;
+}
+
+#videoContainer{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+}
+
+#videoContainer video{
+    width: 100%;
+    height: 83vh;
+    background-color: rgb(0, 0, 0);
+    margin: auto;
+}
+
+/*TABS PARA TIPOS DE COMIDAS*/
+.nav-tabs .nav-link.active{
+    color: #f5f5f5;
+    background: linear-gradient(0deg, #4e3d06, #e7b40b );
+    border: none;
+}
+
+.nav-tabs .nav-link:hover:not(.active){
+    color: #e7b40b;
+}
+
+.card img{
+    width: 100%;
+    height: 40vh;
+}
+
+
+.card-body{
+    height: auto;
+}
+
+.card-prize{
+    color: rgb(153, 33, 33);
+    font-size: bold;
+}
+
+.tab-content .card:hover{
+    border: 3px solid #9e7c0b;
+    box-shadow: 0px 5px 15px #9e7c0b;
+}
+
+.card{
+    border: 3px solid rgb(153, 33, 33,0);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #9e7c0b;
+    color: white;
+}
+
+.accordion-button:focus{
+    outline: 2px solid  #9e7c0b;
+    box-shadow: 0 0 5px #9e7c0b;
+}
+
+#faq a {
+    text-decoration: none;
+}
+
+#faq a button{
+    background-color: #e7b40b;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px;
+}
+
+#faq a button:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+footer a i:hover{
+    box-shadow: 2px 2px 15px #9e7c0b;
+}
