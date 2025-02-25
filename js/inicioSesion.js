@@ -13,10 +13,14 @@ document.querySelector("form").addEventListener("submit", async (event) => {
     const data = await response.json();
 
     if (response.ok) {
-        localStorage.setItem("token", data.token);
+        localStorage.setItem("usuario", data.usuario); // Guarda el usuario
+        console.log("Usuario desde localStorage:", localStorage.getItem("usuario"));
+        
+        localStorage.setItem("token", data.token); // Guarda el token
         alert("Inicio de sesión exitoso");
-        window.location.href = data.rol === "admin" ? "vistaAdministrador.html" : "principal.html";
+        window.location.href = "principal.html"; // Redirige a la página principal
     } else {
         alert(data.msg);
     }
+    
 });
