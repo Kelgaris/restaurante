@@ -68,14 +68,16 @@ header {
 }
 
 #buscar,
-#seleccionar {
+#seleccionar,
+#solicitarReserva {
   color: #e7b40b;
   background-color: black;
   border: 1px solid #e7b40b;
 }
 
 #buscar:hover,
-#seleccionar:hover {
+#seleccionar:hover,
+#solicitarReserva:hover {
   background-color: #e7b40b;
   color: black;
 }
@@ -196,6 +198,12 @@ footer a i:hover{
     border-bottom: 3px solid #e7b40b;
 }
 
+/*VISTA RESERVA MESAS*/
+
+.tituloReserva{
+  margin-bottom: 10%;
+  border-bottom: 3px solid #e7b40b;
+}
 
 @media(max-width: 765px) {
     .row{
