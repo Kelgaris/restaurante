@@ -16,7 +16,7 @@ document.getElementById("menuForm").addEventListener("submit", async function(ev
     }
 
     try {
-        const response = await fetch("http://localhost:5000/api/auth/nuevoPedido", {  // Asegúrate de que la URL sea correcta
+        const response = await fetch("https://restaurante-api-sage.vercel.app/api/auth/nuevoPedido", {  // Asegúrate de que la URL sea correcta
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ usuario, productos }),
@@ -52,7 +52,7 @@ document.getElementById("menuInfantilForm").addEventListener("submit", async fun
     }
 
     try {
-        const response = await fetch("http://localhost:5000/api/auth/nuevoPedido", {  // Asegúrate de que la URL sea correcta
+        const response = await fetch("https://restaurante-api-sage.vercel.app/api/auth/nuevoPedido", {  // Asegúrate de que la URL sea correcta
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ usuario, productos }),

@@ -62,7 +62,7 @@ document.getElementById("reservaForm").addEventListener("submit", async function
     }
 
     try {
-        const response = await fetch("http://localhost:5000/api/auth/nuevaMesa", {  // Asegúrate de que la URL sea correcta
+        const response = await fetch("https://restaurante-api-sage.vercel.app/api/auth/nuevaMesa", {  // Asegúrate de que la URL sea correcta
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ usuario, nombre, apellidos, telefono, cantidadPersonas, fecha, hora }),

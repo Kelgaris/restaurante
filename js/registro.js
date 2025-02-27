@@ -13,7 +13,7 @@ document.querySelector("form").addEventListener("submit", async (event) => {
     }
 
     // Hacer la solicitud POST a la API de registro
-    const response = await fetch("http://localhost:5000/api/auth/register", {
+    const response = await fetch("https://restaurante-api-sage.vercel.app/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ usuario, password }),
