@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const containerMesas = document.querySelector(".containerMesas .mesas");
   
     function eliminarPedido(id) {
-      fetch("http://localhost:5000/api/auth/pedidos/eliminar", {
+      fetch("https://restaurante-api-sage.vercel.app/api/auth/pedidos/eliminar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id }),
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     function eliminarMesa(id) {
-      fetch("http://localhost:5000/api/auth/mesas/eliminar", {
+      fetch("https://restaurante-api-sage.vercel.app/api/auth/mesas/eliminar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id }),
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     function cargarPedidos() {
-      fetch("http://localhost:5000/api/auth/pedidos")
+      fetch("https://restaurante-api-sage.vercel.app/api/auth/pedidos")
         .then((response) => {
           if (!response.ok) {
             throw new Error("Error en la respuesta del servidor");
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function cargarMesas() {
-      fetch("http://localhost:5000/api/auth/mesas")
+      fetch("https://restaurante-api-sage.vercel.app/api/auth/mesas")
         .then((response) => {
           if (!response.ok) {
             throw new Error("Error en la respuesta del servidor");
