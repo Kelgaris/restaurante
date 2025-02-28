@@ -38,7 +38,7 @@ const mostrarPedidos = (pedidos) => {
         pedidoElement.classList.add('pedido-item', 'p-3', 'border', 'rounded', 'w-100');
         pedidoElement.innerHTML = `
             <strong>Pedido ID:</strong> ${pedido._id} <br>
-            <strong>Detalles:</strong> ${pedido.detalles}
+            <strong>Detalles:</strong> ${pedido.productos}
         `;
 
         containerPedidos.appendChild(pedidoElement);

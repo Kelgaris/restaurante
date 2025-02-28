@@ -205,6 +205,37 @@ footer a i:hover{
   border-bottom: 3px solid #e7b40b;
 }
 
+/*Reservas usuario*/
+.pedido-item {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.pedido-item strong {
+  font-weight: bold;
+  color: black;
+}
+
+.pedido-item p {
+  font-size: 14px;
+  color: #555555;
+  margin-top: 5px;
+}
+
+.pedido-item p {
+  font-style: italic;
+  color: #777777;
+  text-align: center;
+}
+
+.pedidos {
+  padding: 0 15px;
+}
+
+
 @media(max-width: 765px) {
     .row{
         border-bottom: none;
