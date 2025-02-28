@@ -36,7 +36,6 @@ const mostrarPedidos = (pedidos) => {
     pedidos.forEach(pedido => {
         console.log(pedido.productos);
         
-        
         const pedidoElement = document.createElement('div');
         pedidoElement.classList.add('pedido-item', 'p-3', 'border', 'rounded', 'w-100');
         pedidoElement.innerHTML = `
