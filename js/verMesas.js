@@ -25,7 +25,7 @@ const obtenerPedidosPorUsuario = async (usuario) => {
 };
 
 const mostrarPedidos = (pedidos) => {
-    const containerPedidos = document.querySelector('.pedidos');
+    const containerPedidos = document.querySelector('.mesas');
     containerPedidos.innerHTML = '';  // Limpiamos el contenedor antes de mostrar nuevos pedidos
 
     if (pedidos.length === 0) {
